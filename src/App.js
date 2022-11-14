@@ -1,9 +1,22 @@
-import React from 'react'
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import Countries from "./components/Countries";
+import Navbar from "./components/Navbar";
+import FullInfo from "./pages/FullInfo";
 
 const App = () => {
-  return (
-    <div>App</div>
-  )
-}
+  const [theme, settheme] = useState(false);
 
-export default App
+  return (
+    <div className={`${theme ? "bg-dark" : "bg-light"}`}>
+      <Navbar theme={theme} settheme={settheme} />
+      <Routes>
+        <Route path="/" element={<Countries theme={theme} />} />
+        <Route path="/country/:name" element={<FullInfo/>} />
+      </Routes>
+    </div>
+  );
+};
+
+export default App;
