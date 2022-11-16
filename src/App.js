@@ -1,5 +1,4 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Countries from "./components/Countries";
 import Navbar from "./components/Navbar";
@@ -13,8 +12,9 @@ const App = () => {
       <Navbar theme={theme} settheme={settheme} />
       <Routes>
         <Route path="/" element={<Countries theme={theme} />} />
-        <Route path="/country/:name" element={<FullInfo/>} />
+        <Route path="/country/:name" element={<FullInfo theme={theme} />} />
       </Routes>
+      <p style={{padding:'25px'}}>Made By Me With 💚 :)</p>
     </div>
   );
 };
