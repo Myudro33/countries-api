@@ -6,7 +6,7 @@ import { Grow } from "@mui/material";
 const Card = ({ capital, region, img, population, name, theme }) => {
   const checked = true;
   return (
-    <Grid item xs={3}>
+    <Grid item xs={12} sm={4} md={3}>
       <Link style={{ textDecoration: "none" }} to={`/country/${name}`}>
         <Grow
           in={checked}
