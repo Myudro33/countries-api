@@ -50,6 +50,7 @@ const Countries = ({ theme }) => {
         flexDirection: "column",
         alignItems: "center",
         marginTop: "30px",
+        height:{sx:'200vh',sm:'130vh',md:'140vh'}
       }}
     >
       <Search
