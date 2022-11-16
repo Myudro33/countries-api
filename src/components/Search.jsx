@@ -25,7 +25,7 @@ const Search = ({ theme, region, setregion, cityName, setcityName }) => {
         value={cityName}
         onChange={(e) => setcityName(e.target.value)}
         sx={{
-          width: "400px",
+          width:{lg:'400px',xs:'200px',sm:'300px'}, 
           backgroundColor: `${
             theme ? "hsl(209, 23%, 22%)" : "hsl(0, 0%, 100%)"
           }`,
@@ -41,7 +41,7 @@ const Search = ({ theme, region, setregion, cityName, setcityName }) => {
         }}
         variant="filled"
       />
-      <FormControl sx={{ width: "180px" }}>
+      <FormControl sx={{ width:{lg:'180px',xs:'100px',sm:'150px'} }}>
         <InputLabel
           sx={{
             backgroundColor: `${theme ? "hsl(207, 26%, 17%)" : "whitesmoke"}`,
